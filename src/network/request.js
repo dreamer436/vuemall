@@ -6,14 +6,14 @@ export function request(config) {
         timeout:5000
     })
     // axios拦截器
-    // 2.1请求拦截
+    // 2.1请求拦截 请求失败
     instance.interceptors.request.use( config => {
         return config;
     }, err => {
 
     });
 
-    // 2.2响应拦截
+    // 2.2响应拦截 请求成功
     instance.interceptors.response.use( res => {
         return res.data
     }, err => {
